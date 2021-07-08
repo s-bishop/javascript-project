@@ -5,10 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Buddy</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h4>something fishy</h4>
+    <h1>Weekly Budget</h1>
+    <h2>Balance: <span>0</span></h2>
+    <form class="budget">
+        <label>Budget</label>
+        <input type="number" required min="0" step=".01">
+        <button>Submit</button>
+    </form>
+    <form class="category">
+        <div>
+            <label>Category</label>
+            <select name="category" id="categoryName">
+                <option value="entertainment">Entertainment</option>
+                <option value="food">Food</option>
+                <option value="clothing">Clothing</option>
+                <option value="bills">Bills</option>
+            </select>
+        </div>
+        <div>
+            <label>Amount</label>
+            <!-- adjust min number .00 -->
+            <input type="number" required min="0" step=".01">
+            <button>Submit</button>
+            <h3>Money Spent: <span>0</span></h3>
+        </div>
+    </form>
+    <div class="categorySpent">
+        <p>Entertainment: <span>0</span></p>
+        <p>Food: <span>0</span></p>
+        <p>Clothing: <span>0</span></p>
+        <p>Bills: <span>0</span></p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
