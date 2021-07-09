@@ -12,11 +12,11 @@
 </head>
 <body>
     <h1>Weekly Budget</h1>
-    <h2>Balance: <span>0</span></h2>
+    <h2>Balance: <span id="balance">0</span></h2>
     <form class="budget">
         <label>Budget</label>
-        <input type="number" required min="0" step=".01">
-        <button>Submit</button>
+        <input type="number" required min="0" step=".01" id="budgetAmt">
+        <button type="submit">Submit</button>
     </form>
     <form class="category">
         <div>
@@ -32,15 +32,15 @@
             <label>Amount</label>
             <!-- adjust min number .00 -->
             <input type="number" required min="0" step=".01">
-            <button>Submit</button>
-            <h3>Money Spent: <span>0</span></h3>
+            <button type="submit">Submit</button>
+            <h3>Money Spent: <span id="moneySpent">0</span></h3>
         </div>
     </form>
     <div class="categorySpent">
-        <p>Entertainment: <span>0</span></p>
-        <p>Food: <span>0</span></p>
-        <p>Clothing: <span>0</span></p>
-        <p>Bills: <span>0</span></p>
+        <p>Entertainment: <span id="entertainment">0</span></p>
+        <p>Food: <span id="food">0</span></p>
+        <p>Clothing: <span id="clothing">0</span></p>
+        <p>Bills: <span id="bills">0</span></p>
     </div>
     <script src="script.js"></script>
 </body>
