@@ -1,22 +1,34 @@
 "use strict"
 let form = document.querySelector("form");
+//let pushButton = document.getElementsByClassName("listener")
 //let balance = 0;
 let span = document.getElementById("balance");
+let spanTwo = document.getElementById("moneySpent");
 let budget = new FormData(form);
 // let balance = document.querySelector("span").innerText;
 // let budgetInput = document.getElementById("budgetAmt").valueAsNumber;
 
-form.addEventListener("submit", (event)=>{
-    //prevent refresh
-    event.preventDefault();
-    document.querySelector("span").innerText = document.getElementById("budgetAmt").valueAsNumber;
-    console.log(document.getElementById("budgetAmt").valueAsNumber);
-});
-//add budget into the balance
+// form.addEventListener("submit", (event)=>{  
+//     //prevent refresh
+     //event.preventDefault();
+     //     console.log(document.getElementById("budgetAmt").valueAsNumber);
+     // });
+     //add budget into the balance
+     document.querySelectorAll(".listener").forEach(item => {
+         item.addEventListener("submit", event => {
+             event.preventDefault();
+             document.querySelector("span").innerText = +(document.getElementById("budgetAmt").valueAsNumber);
+            })
+        })
 
+        form.addEventListener("submit", ()=>{  
+        spanTwo.innerText += document.getElementById("moneyInput").valueAsNumber;
+        });
 //amount added to money spent
 
 //link amount to category
+
+
 
 //subtract amount from balance
 

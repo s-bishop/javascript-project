@@ -13,12 +13,12 @@
 <body>
     <h1>Weekly Budget</h1>
     <h2>Balance: <span id="balance">0</span></h2>
-    <form class="budget">
+    <form class="budget, listener">
         <label>Budget</label>
         <input type="number" required min="0" step=".01" id="budgetAmt">
         <button type="submit">Submit</button>
     </form>
-    <form class="category">
+    <form class="category, listener">
         <div>
             <label>Category</label>
             <select name="category" id="categoryName">
@@ -31,7 +31,7 @@
         <div>
             <label>Amount</label>
             <!-- adjust min number .00 -->
-            <input type="number" required min="0" step=".01">
+            <input type="number" required min="0" step=".01" id="moneyInput">
             <button type="submit">Submit</button>
             <h3>Money Spent: <span id="moneySpent">0</span></h3>
         </div>
