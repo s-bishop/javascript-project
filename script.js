@@ -21,9 +21,18 @@ let budget = new FormData(form);
             })
         })
 
-        form.addEventListener("submit", ()=>{  
-        spanTwo.innerText += document.getElementById("moneyInput").valueAsNumber;
-        });
+        document.querySelectorAll(".listener").forEach(item => {
+            item.addEventListener("submit", event => {
+                //event.preventDefault();
+                spanTwo.innerText = document.getElementById("moneyInput").valueAsNumber;
+               })
+           })
+
+        
+    // document.getElementById("submitTwo").addEventListener("submit", ()=>{  
+    //     spanTwo.innerText = document.getElementById("moneyInput").valueAsNumber;
+    //     console.log(document.getElementById("moneyInput").valueAsNumber)
+    //     });
 //amount added to money spent
 
 //link amount to category
