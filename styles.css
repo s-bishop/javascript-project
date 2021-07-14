@@ -1,17 +1,19 @@
-/*change background to red when you're broke*/
-
-body {
+body{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(93, 169, 93);
     font-family: 'Roboto Slab', serif;
-}
-
-h3 {
-    text-align: center;
+    
 }
 
 div {
     margin: 20px;
+    /* width:400px; */
+}
+
+
+
+#categoryName{
+    width:210px;
 }
