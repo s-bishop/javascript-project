@@ -1,73 +1,66 @@
-"use strict"
-let form = document.querySelector("form");
-//let pushButton = document.getElementsByClassName("listener")
-//let balance = 0;
-let span = document.getElementById("balance");
-let spanTwo = document.getElementById("moneySpent");
-let budget = new FormData(form);
-// let balance = document.querySelector("span").innerText;
-// let budgetInput = document.getElementById("budgetAmt").valueAsNumber;
+"use strict";
 
-// form.addEventListener("submit", (event)=>{  
-//     //prevent refresh
-     //event.preventDefault();
-     //     console.log(document.getElementById("budgetAmt").valueAsNumber);
-     // });
-     //add budget into the balance
-     document.querySelectorAll(".listener").forEach(item => {
-         item.addEventListener("submit", event => {
-             event.preventDefault();
-             document.querySelector("span").innerText = +(document.getElementById("budgetAmt").valueAsNumber);
-            })
-        })
+function addMoney(){
+    var totalBudget = parseInt(document.getElementById("totalBudget").innerHTML);
+    var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
+        var money = parseInt(document.getElementById("money").value);
+        if (money == "" || isNaN(money)){
+            alert("Please enter a valid number");
+        }
+        else{
+            totalBudget += money;
+            currentBalance += money;
+            document.getElementById("totalBudget").innerHTML = totalBudget;
+            document.getElementById("currentBalance").innerHTML = currentBalance;
+        }
+}
 
-        document.querySelectorAll(".listener").forEach(item => {
-            item.addEventListener("submit", event => {
-                //event.preventDefault();
-                spanTwo.innerText = document.getElementById("moneyInput").valueAsNumber;
-               })
-           })
+function addExpense(){
+    var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
+    var expenseType = document.getElementById("categoryName").value;
+    var spent = parseInt(document.getElementById("moneySpent").innerHTML);
+    var expenseAmt = parseInt(document.getElementById("expenseAmt").value);
+    
+    // making individual variables for each expense cause that's all i got. This is the LONG way :P
+    var entertainmentExpense = parseInt(document.getElementById("entertainment").innerHTML);
+    var foodExpense = parseInt(document.getElementById("food").innerHTML);
+    var clothingExpense = parseInt(document.getElementById("clothing").innerHTML);
+    var billsExpense = parseInt(document.getElementById("bills").innerHTML);
+    // var expenseLog 
 
+    if ( expenseAmt == "" || isNaN(expenseAmt)){
+            alert("Please enter a valid number");
+        }else if(expenseAmt <= currentBalance){
+            currentBalance -= expenseAmt;
+            document.getElementById("currentBalance").innerHTML = currentBalance;
+            // document.getElementById(expenseType).innerHTML = expenseAmt;
+            spent += expenseAmt;
+            document.getElementById("moneySpent").innerHTML = spent;
+            console.log(expenseType);
+                // THE JOURNEY BEGINS.
+                //please delete me if we find a way to convert expenseType into the expense categories.            
+                if (expenseType == "entertainment"){
+                    console.log("freef");
+                    // grab expenseAmt and add it to the correct .categorySpent 
+                    entertainmentExpense += expenseAmt;
+                    console.log(entertainmentExpense);
+                    document.getElementById("entertainment").innerHTML = entertainmentExpense
+                }else if(expenseType == "food"){
+                    foodExpense += expenseAmt;
+                    document.getElementById("food").innerHTML = foodExpense;
+                }else if(expenseType == "clothing"){
+                    clothingExpense += expenseAmt;
+                    document.getElementById("clothing").innerHTML = clothingExpense;
+                }else{
+                    billsExpense += expenseAmt;
+                    document.getElementById("bills").innerHTML = billsExpense;
+                }
+
+                }
+
+            
         
-    // document.getElementById("submitTwo").addEventListener("submit", ()=>{  
-    //     spanTwo.innerText = document.getElementById("moneyInput").valueAsNumber;
-    //     console.log(document.getElementById("moneyInput").valueAsNumber)
-    //     });
-//amount added to money spent
-
-//link amount to category
-
-
-
-//subtract amount from balance
-
-
-
-
-
-
-
-// Create starter values
-// let expenses = []; // Array of expense objects
-// let monthlyIncome = 0; // Numberical value
-// let expenseTotal = 0; // Numebrical value
-// let balance = 0; // Numerical value
-
-// // Create references to monthly budget elements
-// let monthlyBudget = document.getElementById("monthly_budget");
-// let incomeInput = document.getElementById("income_input");
-// let updateBudgetButton = document.getElementById("update_budget_button");
-
-// //Build a function that displays the budget entered by the user
-// function updateBudget(event) {
-//     event.preventDefault(); // Prevent refresh
-//     // Store user data entry into monthlyIncome
-//     // Input values are strings; need to parse into an integer
-//     monthlyIncome = parseInt (incomeInput.value);
-//     // Display input in the app
-//     monthlyBudget.innerText = "$" + incomeInput.value;
-//     // Reset the form
-//     incomeInput.value = "";
-//     // Update the balance
-//     updateBalance();
-// }
+        else{
+            alert("Sorry, you are currently broke");
+        }
+};
