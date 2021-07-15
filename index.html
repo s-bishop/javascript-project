@@ -20,7 +20,7 @@
     <!-- <h3>Initial Budget</h3> -->
     <h2>Current Balance: <span id="currentBalance">0</span></h2>
     <div>
-      <input type="number" placeholder="Initial Budget" id="money" />
+      <input type="number" placeholder="Initial Budget" id="money" min="1"/>
       <button onclick="addMoney()" id="addMoney">Add Money</button><br />
     </div>
 
@@ -32,7 +32,7 @@
         <option value="clothing">Clothing</option>
         <option value="bills">Bills</option></select>
     
-        <input type="number" id="expenseAmt" />
+        <input type="number" id="expenseAmt" min="1"/>
         <button onclick="addExpense()" id="addExpense">Submit Expense</button>
     </div>
     <h3>Money Spent: <span id="moneySpent">0</span></h3>
