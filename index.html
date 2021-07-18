@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,41 +14,53 @@
 </div>
 </head>
 <body>
-    
-        <!-- <img src="mohammad-rahmani-LrxSl4ZxoRs-unsplash (1).jpg"> -->
-
-        <h1>Weekly Budget</h1>
-        <h2>Initial Budget: <span id="totalBudget">0</span></h2>
-        <!-- <h3>Initial Budget</h3> -->
-        <h2>Current Balance: <span id="currentBalance">0</span></h2>
-        <div>
-          <input type="number" placeholder="Initial Budget" id="money" />
-          <button onclick="addMoney()" id="addMoney">Add Money</button><br />
-        </div>
-        <div>
-          <label class="dropDown"></label>
-          <select name="category" id="categoryName">
-            <option value="entertainment">Entertainment</option>
-            <option value="food">Food</option>
-            <option value="clothing">Clothing</option>
-            <option value="bills">Bills</option></select
-          >
-        </div>
-        <div>
-        
-            <input type="number" id="expenseAmt" />
-            <button onclick="addExpense()" id="addExpense">Submit Expense</button>
-        </div>
-        <h3>Money Spent: <span id="moneySpent">0</span></h3>
-        <div class="categorySpent">
-            <p>Entertainment: <span id="entertainment">0</span></p>
-            <p>Food: <span id="food">0</span></p>
-            <p>Clothing: <span id="clothing">0</span></p>
-            <p>Bills: <span id="bills">0</span></p>
-        </div>
-        
-    
-
+  <div class="main">
+    <div class="section1">
+      <h1>Weekly Budget</h1>
+      <h2>Initial Budget: <span id="totalBudget">0</span></h2>
+      <!-- <h3>Initial Budget</h3> -->
+      <h2>Current Balance: <span id="currentBalance">0</span></h2>
+    </div>
+    <div class="section2">
+      <div>
+        <input type="number" placeholder="Initial Budget" id="money" />
+        <button onclick="addMoney()" id="addMoney">Add Money</button><br />
+      </div>
+      <div>
+        <label class="dropDown"></label>
+        <select name="category" id="categoryName">
+          <option value="entertainment">Entertainment</option>
+          <option value="food">Food</option>
+          <option value="clothing">Clothing</option>
+          <option value="bills">Bills</option>
+          <option value="rent">Rent</option>
+          <option value="Eggs">Eggs</option>
+        </select>
+      </div>
+      <div>
+          <input type="number" id="expenseAmt" />
+          <button onclick="addExpense()" id="addExpense">Submit Expense</button>
+      </div>
+    </div>
+    <div class="section3">
+      <h3>Money Spent: <span id="moneySpent">0</span></h3>
+      <div class="categorySpent">
+          <ul>
+            <li>Entertainment: <span id="entertainment">0</span></li>
+            <li>Food: <span id="food">0</span></li>
+            <li>Clothing: <span id="clothing">0</span></li>
+            <li>Bills: <span id="bills">0</span></li>
+            <li>Rent: <span id="rent">0</span></li>
+            <li>Eggs: <span>0</span></li>
+          </ul>    
+      </div>
+    </div>
+    </div>
+  
+  <div class="image">
+    <img src="james_money.gif" alt="PokeMon Money Gifs">
+  </div>
+​
     <script src="script.js"></script>
   </body>
 </html>
