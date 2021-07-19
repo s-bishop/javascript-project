@@ -6,6 +6,40 @@ body{
     font-family: 'Roboto Slab', serif;
     
 }
+
+.section1 {
+    border: solid 3px black;
+    border-radius: 25px;
+    padding: 10px;
+    background-image: linear-gradient( 180deg, white, rgb(64, 210, 64));
+    /* background: rgb(64, 210, 64); */
+}
+
+.section2 {
+    border: solid 3px black;
+    border-radius: 25px;
+    padding: 10px;
+    /* background-image: linear-gradient( 180deg, white, green); */
+    background-image: linear-gradient( 180deg, white, rgb(64, 210, 64));
+}
+
+.section3 {
+    border: solid 3px black;
+    border-radius: 25px;
+    padding: 10px;
+    background-image: linear-gradient( 180deg, white, rgb(64, 210, 64));ient( 180deg, white, green);   
+}
+
+.style {
+    border-radius: 7px;
+    background-color: lightblue;
+    transition-duration: 0.1s;
+}
+
+.style:hover {
+    background-color: rgba(55, 104, 227, 0.633);
+}
+
 /* start of modal */
 .modal {
     display: none; /* Hidden by default */
@@ -54,7 +88,7 @@ div {
 
 h1 {
     font-size: 3rem;
-    text-shadow: 1px 1px 1px white, 2px 2px 1px white;
+    text-shadow: 1px 1px 1px green, 2px 2px 1px green;
 }
 
 
@@ -65,18 +99,7 @@ h1 {
 #jesseNoMoney {
     display: none;
 }
-/* Scott I started the border just to see how the dimensions of the divs */
-/* Do what you will with them sir */
-.section1{
-    border: 1px black solid;
-    
-}
-.section2{
-    border: 1px black solid;
-}
-.section3{
-    border: 1px solid black;
-}
+
 
 
 
