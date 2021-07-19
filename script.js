@@ -74,5 +74,12 @@ function addExpense(){
                 }
                 if (currentBalance == 0){
                     document.body.style.background = "red";
+
+                    // hide the James Money image if balance = 0
+                    document.getElementById("jamesMoney").style.display = "none";
+
+                    // show the Jesse No Money pic if balance is = 0
+                    document.getElementById("jesseNoMoney").style.display = "inline";
                 }
 }
+        
