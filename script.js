@@ -77,6 +77,8 @@ window.onclick = function(event) {
 }
   }
   if (currentBalance == 0) {
+    var audio = new Audio ("priceiswrong.mp3");
+    audio.play();
     document.body.style.background = "red";
 
     // hide the James Money image if balance = 0
