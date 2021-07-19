@@ -3,13 +3,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Budget Buddy</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
       rel="stylesheet"
     />
+    
     
 </div>
 </head>
@@ -23,8 +24,9 @@
     </div>
     <div class="section2">
       <div>
-        <input type="number" placeholder="Initial Budget" id="money" />
-        <button onclick="addMoney()" id="addMoney">Add Money</button><br />
+        <input type="number" placeholder="Initial Budget" id="money" min="1"/>
+        <button onclick="addMoney()" id="addMoney">Add Money</button>
+        <input type='button' onclick='location.reload();' value='Reset' />
       </div>
       <div>
         <label class="dropDown"></label>
@@ -38,8 +40,8 @@
         </select>
       </div>
       <div>
-          <input type="number" id="expenseAmt" />
-          <button onclick="addExpense()" id="addExpense">Submit Expense</button>
+          <input type="number" onfocus= "this.value=''" id="expenseAmt" />
+          <button onclick="addExpense()"  id="addExpense">Submit Expense</button>
       </div>
     </div>
     <div class="section3">
@@ -51,7 +53,7 @@
             <li>Clothing: <span id="clothing">0</span></li>
             <li>Bills: <span id="bills">0</span></li>
             <li>Rent: <span id="rent">0</span></li>
-            <li>Eggs: <span>0</span></li>
+            <!-- <li>Eggs: <span>0</span></li> -->
           </ul>    
       </div>
     </div>

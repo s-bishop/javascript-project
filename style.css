@@ -25,6 +25,18 @@ h1 {
 #jesseNoMoney {
     display: none;
 }
+/* Scott I started the border just to see how the dimensions of the divs */
+/* Do what you will with them sir */
+.section1{
+    border: 1px black solid;
+    
+}
+.section2{
+    border: 1px black solid;
+}
+.section3{
+    border: 1px solid black;
+}
 
 
 
@@ -49,7 +61,7 @@ h1 {
     }
 
     img {
-        width: 750px;
+        width: 600px;
     }
 
     .main {

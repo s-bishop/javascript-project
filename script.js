@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 function addMoney(){
     var totalBudget = parseInt(document.getElementById("totalBudget").innerHTML);
     var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
@@ -70,7 +72,9 @@ function addExpense(){
             
                 
                 else{
-                    alert("Sorry, you are currently broke");
+                    alert("Sorry, you do not have enough funds for that");
+                    
+
                 }
                 if (currentBalance == 0){
                     document.body.style.background = "red";
@@ -80,6 +84,10 @@ function addExpense(){
 
                     // show the Jesse No Money pic if balance is = 0
                     document.getElementById("jesseNoMoney").style.display = "inline";
+                    
+                    setTimeout(function(){
+                        window.location.reload(1);
+                     }, 5000);
                 }
 }
         
